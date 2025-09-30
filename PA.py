@@ -16,9 +16,19 @@ while loop == True:
     user_respo = str("")
 
     os.system('cls')
-   
-    termo1 = int(input('Insira o primeiro termo: '))
-    r = int(input('Insira a razão da PA: '))
+
+    termo1 = float(input('Insira o primeiro termo: '))
+    r = float(input('Insira a razão da PA: '))
+
+    if termo1 % 1 == 0:
+        termo1 = int(termo1)
+    else:
+        termo1 = float(termo1)
+
+    if r % 1 == 0:
+        r = int(r)
+    else:
+        r = float(r)
 
     for c in range (1, 11):
 
@@ -50,5 +60,3 @@ while loop == True:
         else:
             print("\nResposta inválida, tente novamente\n")
 print('\nObrigado por usar o meu programa :D')
-   
-
